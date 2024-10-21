@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <main>
+        <form id="cityForm">
+            <div id="searchContainer">
+                <input id="cityInput" type="text" placeholder="Search for a city, state or country..." autofocus required autocomplete="off">
+                <button id="searchBtn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <button type="button" id="toggleUnit" value="metric">
+                <div id="toggleText">&deg;C</div>
+            </button>
+        </form>
+        <div id="loading">
+            <img src="icons/clear-day.svg" alt="" id="loadingIcon">
+            <span>Loading...</span>
+        </div>
+        <div id="error">
+            <p>Oop! Something went wrong...</p>
+            <p id="errorMessage"></p>
+            <button id="refreshBtn">Try Again</button>
+        </div>
+        <div id="content">
+            <h1 id="cityName"></h1>
+            <div>
+                <p id="clock"></p>
+                <p id="date"></p>
+            </div>
+            <div id="weather">
+                <img id="currentWeatherIcon" src=""" class="icon">
+                <div id="temperature">
+                    <h2></h2>
+                    <span></span>
+                </div>
+            </div>
+            <div id="weatherInfos">
+                <div id="humidity" class="container">
+                    <h3>Humidity</h3>
+                    <div>
+                        <img src="icons/drops.svg" class="icon">
+                        <span id="humidityInfo"></span>
+                    </div>
+                </div>
+                <div id="wind" class="container">
+                    <h3>Wind Speed</h3>
+                    <div>
+                        <img src="icons/wind-night.svg" class="icon">
+                        <span id="windSpeed"></span>
+                    </div>
+                </div>
+                <div id="highestTempurature" class="container">
+                    <h3>Highest Tempurature</h3>
+                    <div>
+                        <img src="icons/tempurature.svg" class="icon">
+                        <span id="highTemp"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="sunInfos">
+                <div id="sunrise" class="container">
+                    <h3>Sunrise</h3>
+                    <div>
+                        <img src="icons/clear-day.svg" class="icon">
+                        <span id="sunriseTime"></span>
+                    </div>
+                </div>
+                <div id="sunset" class="container">
+                    <h3>Sunset</h3>
+                    <div>
+                        <img src="icons/clear-night.svg" class="icon">
+                        <span id="sunsetTime"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h3 class="containerTitle">
+                    <i class="fas fa-clock"></i>
+                    hourly forcast
+                </h3>
+                <ul id="hourlyForecast"></ul>
+            </div>
+            <div class="container">
+                <h3 class="containerTitle">
+                    <i class="fas fa-calendar-days"></i>
+                    weekly forcast
+                </h3>
+                <ul id="weeklyForecast"></ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
