@@ -1,6 +1,6 @@
 
 
-const API_KEY = "GQ9CS732CEKG55K85Y6JJ248D";
+const API_KEY = process.env.API_KEY;
 
 let result = {
     success: false,
